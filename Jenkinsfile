@@ -12,11 +12,6 @@ pipeline {
                 sh '/var/jenkins_home/workspace/PES1UG22CS057-1/main/hello_exec'
                 echo 'Test Stage Successful'
             }
-                post {
-                    always {
-                      junit 'target/surefire-reports/*.xml'
-                  }
-            }
         }
         stage('Deploy') {
             steps {
